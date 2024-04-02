@@ -7,9 +7,10 @@ function mincost(arr)
 	let len = arr.length;
 	while(len != 1){
 		let sum = arr[0]+arr[1];
-		arr2.put(sum);
-		arr2.splice(0,2,sum);
-		arr.sort();
+		arr2.push(sum);
+		arr2.splice(0,2);
+		arr2.push(sum);
+		arr.sort((a,b) => a-b);
 		len--
 	}
 	let res = 0;
