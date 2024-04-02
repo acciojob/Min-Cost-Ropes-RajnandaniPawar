@@ -2,8 +2,9 @@ function mincost(arr)
 { 
 //write your code here
 // return the min cost
-		let arr2 = [];
 	arr.sort((a,b) => a-b);
+		let arr2 = [];
+	// arr.sort((a,b) => a-b);
 	let len = arr.length;
 	while(len != 1){
 		let sum = arr[0]+arr[1];
