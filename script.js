@@ -2,12 +2,20 @@ function mincost(arr)
 { 
 //write your code here
 // return the min cost
-	Arrays.sort(arr);
-	let sum =0 ;
-	foreach(let t=0; t<arr.length; t++){
-		sum = arr[t] + arr[t+1];
+	let arr2 = {};
+	arr.sort();
+	let len = arr.length;
+	while(len != 1){
+		let sum = arr[0]+arr[1];
+		arr2.put(sum);
+		arr2.splice(0,2,sum);
+		arr.sort();
+		len--
 	}
-  return sum;
+	let res = 0;
+	for(let i= 0; i<arr2.length; i++){
+		res += arr2;
+	}
 }
 
 module.exports=mincost;
